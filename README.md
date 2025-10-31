@@ -72,6 +72,7 @@ LabOrderandResults —> EMR (Composition)
 
 
 Aggregation: The ClinicInformation class aggregates multiple DoctorStaffProfile objects. This means a clinic can have several doctors and staff members, but each doctor or staff can exist independently of the clinic. Another aggregation relationship is how the billing and insurance details (which can be multiple based on the patient’s visits) can exist without the patient's existence as it is recorded.
+
 Association: The PatientProfile class is associated with the AppointmentScheduling and DoctorStaffProfile classes, showing that patients book appointments with specific doctors. Similarly, patients are connected to BillingandInsurance through invoices and payments. Furthermore, a doctor can be associated with multiple patients (one or more) and interacts with them through having access to their profiles. The AppointmentScheduling class is associated with the EMR and BillingandInsurance class as the appointments are connected to the visits and visit notes in EMR, and with the BillingandInsurance class, invoices are generated after appointments are complete. In addition, the EMR is relative to the BillingandInsurance class as data like procedures and medications can be found there which then generates charges that can be added to the invoice.
 
 
